@@ -35,8 +35,8 @@ const BreadcrumbHeader = (props) => {
                   // <Link to={item.moduleRoute}>{item.moduleName}</Link>
                   <a href={item.moduleRoute}>{item.moduleName}</a>
                 ) : (
-                    item.moduleName
-                  )}
+                  item.moduleName
+                )}
               </Breadcrumb.Item>
             );
           })}

@@ -340,23 +340,23 @@ class DPolygon extends React.Component {
           <div className="dmap-tools-bottom">
             {isEdit
               ? [
-                <Button
-                  key="delete"
-                  icon="delete"
-                  type="danger"
-                  onClick={() => {
-                    this.delPloygen();
-                  }}
-                />,
-                <Button
-                  key="save"
-                  icon="save"
-                  type="primary"
-                  onClick={() => {
-                    this.onCloseEdit();
-                  }}
-                />
-              ]
+                  <Button
+                    key="delete"
+                    icon="delete"
+                    type="danger"
+                    onClick={() => {
+                      this.delPloygen();
+                    }}
+                  />,
+                  <Button
+                    key="save"
+                    icon="save"
+                    type="primary"
+                    onClick={() => {
+                      this.onCloseEdit();
+                    }}
+                  />
+                ]
               : null}
           </div>
         </div>

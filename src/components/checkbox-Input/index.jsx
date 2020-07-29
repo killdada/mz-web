@@ -2,7 +2,6 @@ import _ from 'underscore';
 import React from 'react';
 import { Checkbox, InputNumber, Row, Col } from 'antd';
 
-
 import './app.less';
 
 class CheckBoxandInput extends React.Component {

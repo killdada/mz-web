@@ -339,89 +339,89 @@ function CreateRecycler(decorator) {
               {this.isCurrentDynamicTab(dynamicTab) ? (
                 dynamicTab.component
               ) : (
-                  <TableItem
-                    currentTabKey={currentTabKey}
-                    dataSourceList={sourceList}
-                    ToolUtil={this.$ToolUtil}
-                    onPageChange={this.onPageChange}
-                    loading={loading}
-                    total={total}
-                    currentPage={currentPage}
-                  >
-                    <Row className="margin-bottom-15 margin-top-5">
-                      {currentTabKey === TAB_ORDER || currentTabKey === TAB_FEE ? (
-                        <Col span={6} className="col-title">
-                          订单号：{' '}
-                          <Input
-                            placeholder="请输入订单号"
-                            value={orderId}
-                            onChange={this.handleChange('orderId')}
-                            style={{ width: 'calc(100% - 90px)' }}
-                          />
-                        </Col>
-                      ) : null}
-                      {currentTabKey === TAB_SERVICE || currentTabKey === TAB_FEE ? (
-                        <Col span={6} className="col-title">
-                          售后单号：{' '}
-                          <Input
-                            placeholder="请输入售后单号"
-                            value={serviceId}
-                            onChange={this.handleChange('serviceId')}
-                            style={{ width: 'calc(100% - 90px)' }}
-                          />
-                        </Col>
-                      ) : null}
-                      {currentTabKey === TAB_COUPON_CONSUME ? (
-                        <Col span={6} className="col-title">
-                          兑换码：{' '}
-                          <Input
-                            placeholder="请输入兑换码"
-                            value={code}
-                            onChange={this.handleChange('code')}
-                            style={{ width: 'calc(100% - 90px)' }}
-                          />
-                        </Col>
-                      ) : null}
-                      {currentTabKey === TAB_COUPON_CONSUME ? (
-                        <Col span={7} className="col-title">
-                          关联订单号：{' '}
-                          <Input
-                            placeholder="请输入关联订单号"
-                            value={orderId}
-                            onChange={this.handleChange('orderId')}
-                            style={{ width: 'calc(100% - 120px)' }}
-                          />
-                        </Col>
-                      ) : null}
-                      {currentTabKey === TAB_CARD_CONSUME ? (
-                        <Col span={7} className="col-title">
-                          <span>核销记录编号： </span>
-                          <Input
-                            placeholder="请填写核销记录编号"
-                            value={consumeOrderId}
-                            onChange={this.handleChange('consumeOrderId')}
-                            style={{ width: 'calc(100% - 120px)' }}
-                          />
-                        </Col>
-                      ) : null}
-                      {isSupplier ? (
-                        <Col span={6}>
-                          <Button type="primary" style={{ width: 90 }} onClick={this.handleSearch}>
-                            查询
+                <TableItem
+                  currentTabKey={currentTabKey}
+                  dataSourceList={sourceList}
+                  ToolUtil={this.$ToolUtil}
+                  onPageChange={this.onPageChange}
+                  loading={loading}
+                  total={total}
+                  currentPage={currentPage}
+                >
+                  <Row className="margin-bottom-15 margin-top-5">
+                    {currentTabKey === TAB_ORDER || currentTabKey === TAB_FEE ? (
+                      <Col span={6} className="col-title">
+                        订单号：{' '}
+                        <Input
+                          placeholder="请输入订单号"
+                          value={orderId}
+                          onChange={this.handleChange('orderId')}
+                          style={{ width: 'calc(100% - 90px)' }}
+                        />
+                      </Col>
+                    ) : null}
+                    {currentTabKey === TAB_SERVICE || currentTabKey === TAB_FEE ? (
+                      <Col span={6} className="col-title">
+                        售后单号：{' '}
+                        <Input
+                          placeholder="请输入售后单号"
+                          value={serviceId}
+                          onChange={this.handleChange('serviceId')}
+                          style={{ width: 'calc(100% - 90px)' }}
+                        />
+                      </Col>
+                    ) : null}
+                    {currentTabKey === TAB_COUPON_CONSUME ? (
+                      <Col span={6} className="col-title">
+                        兑换码：{' '}
+                        <Input
+                          placeholder="请输入兑换码"
+                          value={code}
+                          onChange={this.handleChange('code')}
+                          style={{ width: 'calc(100% - 90px)' }}
+                        />
+                      </Col>
+                    ) : null}
+                    {currentTabKey === TAB_COUPON_CONSUME ? (
+                      <Col span={7} className="col-title">
+                        关联订单号：{' '}
+                        <Input
+                          placeholder="请输入关联订单号"
+                          value={orderId}
+                          onChange={this.handleChange('orderId')}
+                          style={{ width: 'calc(100% - 120px)' }}
+                        />
+                      </Col>
+                    ) : null}
+                    {currentTabKey === TAB_CARD_CONSUME ? (
+                      <Col span={7} className="col-title">
+                        <span>核销记录编号： </span>
+                        <Input
+                          placeholder="请填写核销记录编号"
+                          value={consumeOrderId}
+                          onChange={this.handleChange('consumeOrderId')}
+                          style={{ width: 'calc(100% - 120px)' }}
+                        />
+                      </Col>
+                    ) : null}
+                    {isSupplier ? (
+                      <Col span={6}>
+                        <Button type="primary" style={{ width: 90 }} onClick={this.handleSearch}>
+                          查询
                         </Button>
-                        </Col>
-                      ) : (
-                          <Col span={6}>
-                            <Button shape="circle" icon="search" onClick={this.handleSearch} />
-                          </Col>
-                        )}
-                    </Row>
-                  </TableItem>
-                )}
+                      </Col>
+                    ) : (
+                      <Col span={6}>
+                        <Button shape="circle" icon="search" onClick={this.handleSearch} />
+                      </Col>
+                    )}
+                  </Row>
+                </TableItem>
+              )}
             </div>
           ) : (
-              <div>本供应商没有配置结算项，请联系管理员。</div>
-            )}
+            <div>本供应商没有配置结算项，请联系管理员。</div>
+          )}
         </div>
       );
     }

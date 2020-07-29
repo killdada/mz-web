@@ -261,10 +261,10 @@ class DSelectAddress extends React.Component {
                     );
                   })
                 ) : (
-                    <div className="position-list-item" style={{ color: 'rgba(0, 0, 0, 0.15)' }}>
-                      搜索不到位置
-                    </div>
-                  )}
+                  <div className="position-list-item" style={{ color: 'rgba(0, 0, 0, 0.15)' }}>
+                    搜索不到位置
+                  </div>
+                )}
               </div>
             </div>
           </Modal>

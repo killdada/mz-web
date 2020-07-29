@@ -107,12 +107,12 @@ class AsyncDownload extends React.Component {
                   style={{ fontSize: '45px', color: '#52c41a' }}
                 />
               ) : (
-                    <Icon
-                      type="close-circle"
-                      theme="filled"
-                      style={{ fontSize: '45px', color: '#f5222d' }}
-                    />
-                  )}
+                <Icon
+                  type="close-circle"
+                  theme="filled"
+                  style={{ fontSize: '45px', color: '#f5222d' }}
+                />
+              )}
               <div className="progress-text">
                 {convertProgressText(this.state.progressStatus)}
                 <br />

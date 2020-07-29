@@ -248,8 +248,8 @@ class TableItem extends React.Component {
               </a>
             </div>
           ) : (
-              '无附件'
-            );
+            '无附件'
+          );
         }
       }
     ];
