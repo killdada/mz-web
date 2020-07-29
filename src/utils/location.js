@@ -9,7 +9,7 @@ class Location {
 
   // 点击菜单进入
   isMenuOpen = () => {
-    return this.parseType() === LOCATION.TYPE_MENU_OPEN;
+    return this.parseType() == LOCATION.TYPE_MENU_OPEN;
   };
 
   // 页面刷新加载
