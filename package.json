@@ -17,7 +17,8 @@
     "pt:react": "prettier --parser flow  --debug-check src/components/**/*.jsx",
     "pt:fixreact": "prettier --parser flow  --write src/components/**/*.jsx",
     "pt": "yarn pt:fixjs && yarn pt:fixreact && yarn fix",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -w -r 0"
   },
   "husky": {
     "hooks": {
@@ -64,6 +65,8 @@
     "@commitlint/config-conventional": "^9.1.1",
     "babel-eslint": "^10.1.0",
     "commitizen": "^4.1.2",
+    "conventional-changelog": "^3.1.21",
+    "cz-conventional-changelog": "^3.2.0",
     "eslint": "^7.5.0",
     "eslint-config-alloy": "^3.7.4",
     "eslint-plugin-react": "^7.20.5",
