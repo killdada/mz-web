@@ -14,7 +14,7 @@ class Location {
 
   // 页面刷新加载
   isRefreshOpen = () => {
-    return this.parseType() === LOCATION.TYPE_REFRESH_OPEN;
+    return this.parseType() == LOCATION.TYPE_REFRESH_OPEN;
   };
 
   // 保存页面 hash 路径

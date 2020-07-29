@@ -11,7 +11,7 @@
     "deploy": "father doc deploy",
     "lib:build": "father build",
     "lint": "eslint --ext .js,.jsx src",
-    "fix": "eslint --fix --ext .js,.tsx src",
+    "fix": "eslint --fix --ext .js,.jsx src",
     "pt:js": "prettier --debug-check src/utils/*.js",
     "pt:fixjs": "prettier --parser flow --write src/utils/*.js",
     "pt:react": "prettier --parser flow  --debug-check src/components/**/*.jsx",
