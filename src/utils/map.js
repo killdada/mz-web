@@ -55,7 +55,7 @@ export const placeSearchNearby = ({ pageSize = 5, keyword = '', cpoint, radius =
         });
         placeSearch.searchNearBy(keyword, cpoint, radius, (status, result) => {
           console.log('nearby', status, result);
-          if (status === 'complete' && result.info === 'OK') {
+          if (status == 'complete' && result.info === 'OK') {
             return resolve(result.poiList.pois);
           }
           return reject([]);
