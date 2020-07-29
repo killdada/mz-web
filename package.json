@@ -16,12 +16,13 @@
     "pt:fixjs": "prettier --parser flow --write src/utils/*.js",
     "pt:react": "prettier --parser flow  --debug-check src/components/**/*.jsx",
     "pt:fixreact": "prettier --parser flow  --write src/components/**/*.jsx",
-    "pt": "yarn pt:fixjs && yarn pt:fixreact && yarn fix"
+    "pt": "yarn pt:fixjs && yarn pt:fixreact && yarn fix",
+    "commit": "git-cz"
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
@@ -39,6 +40,11 @@
       "lib/**/*.js"
     ]
   },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
   "author": "yen",
   "license": "ISC",
   "peerDependencies": {
@@ -48,6 +54,8 @@
     "react-dom": ">=16.13.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^9.1.1",
+    "@commitlint/config-conventional": "^9.1.1",
     "babel-eslint": "^10.1.0",
     "commitizen": "^4.1.2",
     "eslint": "^7.5.0",
