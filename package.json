@@ -24,18 +24,13 @@
     }
   },
   "lint-staged": {
-    "linters": {
-      "*.{js,jsx}": [
-        "yarn pt",
-        "git add ."
-      ],
-      "*.{md,css,html,less}": [
-        "prettier --write",
-        "git add ."
-      ]
-    },
-    "ignore": [
-      "lib/**/*.js"
+    "*.{js,jsx}": [
+      "yarn pt",
+      "git add ."
+    ],
+    "*.{md,css,html,less}": [
+      "prettier --write",
+      "git add ."
     ]
   },
   "author": "yen",
