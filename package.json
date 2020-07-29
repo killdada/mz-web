@@ -1,0 +1,82 @@
+{
+  "name": "mz-web",
+  "version": "1.0.0",
+  "description": "mz-web",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "scripts": {
+    "dev": "father doc dev",
+    "build": "father build",
+    "build:doc": "father doc build",
+    "deploy": "father doc deploy",
+    "lib:build": "father build",
+    "lint": "eslint --ext .js,.jsx src",
+    "fix": "eslint --fix --ext .js,.tsx src",
+    "pt:js": "prettier --debug-check src/utils/*.js",
+    "pt:fixjs": "prettier --parser flow --write src/utils/*.js",
+    "pt:react": "prettier --parser flow  --debug-check src/components/**/*.jsx",
+    "pt:fixreact": "prettier --parser flow  --write src/components/**/*.jsx",
+    "pt": "yarn pt:fixjs && yarn pt:fixreact && yarn fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "*.{js,jsx}": [
+        "yarn pt",
+        "git add ."
+      ],
+      "*.{md,css,html,less}": [
+        "prettier --write",
+        "git add ."
+      ]
+    },
+    "ignore": [
+      "lib/**/*.js"
+    ]
+  },
+  "author": "yen",
+  "license": "ISC",
+  "peerDependencies": {
+    "ant-design-pro": ">=2.3.2",
+    "antd": ">=4.5.1",
+    "react": ">=16.13.1",
+    "react-dom": ">=16.13.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "commitizen": "^4.1.2",
+    "eslint": "^7.5.0",
+    "eslint-config-alloy": "^3.7.4",
+    "eslint-plugin-react": "^7.20.5",
+    "father": "^2.29.5",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5"
+  },
+  "dependencies": {
+    "ant-design-pro": "^2.3.2",
+    "antd": "^4.5.1",
+    "axios": "^0.19.2",
+    "component-cookie": "^1.1.4",
+    "immutability-helper": "^3.1.1",
+    "moment": "^2.27.0",
+    "nprogress": "^0.2.0",
+    "object-path": "^0.11.4",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dnd": "^11.1.3",
+    "react-dnd-html5-backend": "^11.1.3",
+    "react-dom": "^16.13.1",
+    "underscore": "^1.10.2"
+  },
+  "files": [
+    "dist",
+    "lib",
+    "es"
+  ]
+}
